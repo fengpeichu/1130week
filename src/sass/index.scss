@@ -1,0 +1,55 @@
+@import "_mixin.scss";
+@import "common.scss";
+.wrap {
+    width: 100%;
+    height: 100%;
+    @include box_flex;
+    @include direction(column);
+    .header {
+        width: 100%;
+        height: pxTorem(50px);
+        // overflow: hidden;
+        // padding: 0 pxTorem(15px);
+        @include box_flex;
+        @include align;
+        @include justify(space-between);
+        img {
+            width: 12%;
+            height: 60%;
+        }
+        i {
+            font-size: pxTorem(30px);
+        }
+        .rena {
+            padding: 0 pxTorem(12px);
+            font-size: pxTorem(23px);
+        }
+    }
+    .body {
+        @include flex;
+    }
+    .bottom {
+        width: 100%;
+        height: pxTorem(50px);
+        background: #ccc;
+        @include box_flex;
+        @include align;
+        @include justify(space-around);
+        dl {
+            width: 20%;
+            height: 100%;
+            @include box_flex;
+            @include align;
+            @include justify;
+            @include direction(column);
+            dd {
+                i {
+                    font-size: pxTorem(20px);
+                }
+            }
+            dt {
+                font-size: pxTorem(14px);
+            }
+        }
+    }
+}
